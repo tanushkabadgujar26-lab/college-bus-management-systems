@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="registration.css">
+  <title>Student Registration</title>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBR1kih2g3NX2x1fpIXfn0hSaAQJXQOPb822wKJSshGA&s=10" alt="Logo">
+    </div>
+
+    <div class="college-name">
+      <h1>VISHWANIKETAN</h1>
+      <p>Institute of Management, Entrepreneurship<br>and Engineering Technology</p>
+    </div>
+
+    <div id="navlinks">
+      <a href="home.html">Home</a>
+      <a href="routes.html">Bus Routes</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="#">Announcements</a>
+      <a href="home.html"><button>Back to Home</button></a>
+    </div>
+  </div>
+
+  <main class="container">
+    
+    <div class="page-title">
+      <div class="icon">👤</div>
+      <div>
+        <h1>Student Registration</h1>
+        <p>Fill in the details below to create your account</p>
+      </div>
+    </div>
+
+    <div class="main-card">
+      <form action="register.php" method="POST" enctype="multipart/form-data">
+        
+        <div class="section-title">1. Personal Information</div>
+
+        <div class="form-grid-3">
+
+          <div class="form-group">
+            <label>Full Name <span class="required">*</span></label>
+            <input type="text" name="full_name" placeholder="Enter full name" required>
+          </div>
+
+          <div class="form-group">
+            <label>Student ID / Enrollment No. <span class="required">*</span></label>
+            <input type="text" name="student_id" id="student_id" placeholder="Enter student ID" required>
+          </div>
+
+          <div class="form-group">
+            <label>Roll Number <span class="required">*</span></label>
+            <input type="text" name="roll_number" placeholder="Enter roll number" required>
+          </div>
+
+        </div>
+
+
+        <div class="form-grid-3">
+
+          <div class="form-group">
+            <label>Date of Birth <span class="required">*</span></label>
+            <input type="date" name="date_of_birth" required>
+          </div>
+
+          <div class="form-group">
+            <label>Gender <span class="required">*</span></label>
+
+            <select name="gender" required>
+              <option value="">Select gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+
+          </div>
+
+          <div class="form-group">
+            <label>Profile Photo (Optional)</label>
+            <input type="file" name="profile_photo" accept="image/*">
+          </div>
+
+        </div>
+
+
+        <div class="section-title">2. Academic Information</div>
+
+        <div class="form-grid-3">
+
+          <div class="form-group">
+
+            <label>Department / Course <span class="required">*</span></label>
+
+            <select name="department" required>
+
+              <option value="">Select department</option>
+              <option value="Computer Engineering">Computer Engineering</option>
+              <option value="AIML Engineering">AIML Engineering</option>
+              <option value="Electronics and Telecommunication Engineering">
+                Electronics and telecommunication Engineering
+              </option>
+              <option value="Electrical Engineering">Electrical Engineering</option>
+              <option value="Civil Engineering">Civil Engineering</option>
+              <option value="Mechanical Engineering">Mechanical Engineering</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>Year <span class="required">*</span></label>
+
+            <select name="year" required>
+
+              <option value="">Select year</option>
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year">2nd Year</option>
+              <option value="3rd Year">3rd Year</option>
+              <option value="4th Year">4th Year</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>Semester <span class="required">*</span></label>
+
+            <select name="semester" required>
+
+              <option value="">Select semester</option>
+              <option value="Semester 1">Semester 1</option>
+              <option value="Semester 2">Semester 2</option>
+              <option value="Semester 3">Semester 3</option>
+              <option value="Semester 4">Semester 4</option>
+              <option value="Semester 5">Semester 5</option>
+              <option value="Semester 6">Semester 6</option>
+              <option value="Semester 7">Semester 7</option>
+              <option value="Semester 8">Semester 8</option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <div class="section-title">3. Contact Information</div>
+
+        <div class="form-grid-3">
+
+          <div class="form-group">
+
+            <label>Mobile Number <span class="required">*</span></label>
+
+            <input
+              type="tel"
+              name="mobile"
+              placeholder="Enter mobile number"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>Email Address <span class="required">*</span></label>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter email address"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>Parent / Guardian Name</label>
+
+            <input
+              type="text"
+              name="parent_name"
+              placeholder="Enter name"
+            >
+
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Parent / Guardian Contact</label>
+
+          <input
+            type="tel"
+            name="parent_contact"
+            placeholder="Enter contact number"
+          >
+
+        </div>
+
+
+        <div class="section-title">4. Bus Information</div>
+
+        <div class="form-grid-3">
+
+          <div class="form-group">
+
+            <label>Bus Number <span class="required">*</span></label>
+
+            <select name="bus_number" required>
+
+              <option value="">Select bus</option>
+              <option value="Bus-01">Bus-01</option>
+              <option value="Bus-02">Bus-02</option>
+              <option value="Bus-03">Bus-03</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>Route <span class="required">*</span></label>
+
+            <select name="route" id="route" required>
+
+              <option value="">Select route</option>
+
+              <option value="Route 1 - Panvel to Campus">
+                Route 1 - Panvel to Campus
+              </option>
+
+              <option value="Route 2 - Vashi to Campus">
+                Route 2 - Vashi to Campus
+              </option>
+
+              <!-- FIXED: Route 3 value -->
+              <option value="Route 3 - Old panvel to Campus">
+                Route 3 - Old panvel to Campus
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>Pickup Point / Stop <span class="required">*</span></label>
+
+            <select name="pickup_point" id="pickup_point" required>
+
+              <option value="">First select route</option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Pickup Time</label>
+
+          <input
+            type="text"
+            name="pickup_time"
+            id="pickup_time"
+            placeholder="--:--"
+            readonly
+          >
+
+          <span class="info-note">
+            ⓘ Pickup time will be displayed automatically based on the selected pickup point.
+          </span>
+
+        </div>
+
+
+        <div class="section-title">5. Login Information</div>
+
+
+        <div class="form-group">
+
+          <label>
+            Username (Student ID)
+            <span class="required">*</span>
+          </label>
+
+          <input
+            type="text"
+            id="username_display"
+            placeholder="Same as Student ID"
+            readonly
+          >
+
+        </div>
+
+
+        <div class="form-grid-2">
+
+          <div class="form-group">
+
+            <label>Password <span class="required">*</span></label>
+
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>Confirm Password <span class="required">*</span></label>
+
+            <input
+              type="password"
+              name="confirm_password"
+              id="confirm_password"
+              placeholder="Confirm password"
+              required
+            >
+
+          </div>
+
+        </div>
+
+
+        <p id="pass-msg" style="color:red;"></p>
+
+        <button type="submit" class="btn-submit">
+          Register Student
+        </button>
+
+        <p class="login-link">
+          Already have an account?
+          <a href="busstdlogin.html">Login here</a>
+        </p>
+
+      </form>
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2> VISHWANIKETAN TRANSPORTATION CELL</h2>
+            <p>Providing organized, safe, and punctual daily transportation for engineering and management students.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="routes.html">Bus Routes &amp; Stops</a>
+            <a href="#fby">Find My Bus</a>
+            <a href="registration.html">Student Registration</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Portals</h3>
+            <a href="busstdlogin.html">Student Login</a>
+            <a href="coar.html">Coordinator Login</a>
+            <a href="schedule.html">Schedule &amp; Timings</a>
+        </div>
+    </div>
+
+    <div class="copyright">
+        &copy; 2026 Vishwaniketan Institute of Management, Entrepreneurship and Engineering Technology. All rights reserved.
+    </div>
+</footer>
+
+
+<script>
+
+  var routeStops = {
+
+    "Route 1 - Panvel to Campus": [
+        "Panvel",
+        "Shivacomplex",
+        "Khanda Colony"
+    ],
+
+    "Route 2 - Vashi to Campus": [
+        "Vashi",
+        "Nerul",
+        "CBD Belapur"
+    ],
+
+    "Route 3 - Old panvel to Campus": [
+        "Kalamboli",
+        "Kamothe",
+        "Kharghar"
+    ]
+
+  };
+
+
+  var pickupTimes = {
+
+    "Panvel": "7:00 AM",
+    "Shivacomplex": "7:02 AM",
+    "Khanda Colony": "7:10 AM",
+
+    "Vashi": "7:15 AM",
+    "Nerul": "7:25 AM",
+    "CBD Belapur": "7:35 AM",
+
+    "Kalamboli": "7:30 AM",
+    "Kamothe": "7:20 AM",
+    "Kharghar": "7:40 AM"
+
+  };
+
+
+  document.getElementById("route").onchange = function () {
+
+    var pickup = document.getElementById("pickup_point");
+
+    var stops = routeStops[this.value] || [];
+
+    pickup.innerHTML =
+        '<option value="">Select pickup stop</option>';
+
+    for (var i = 0; i < stops.length; i++) {
+
+        var option = document.createElement("option");
+
+        option.value = stops[i];
+
+        option.text = stops[i];
+
+        pickup.appendChild(option);
+
+    }
+
+    document.getElementById("pickup_time").value = "";
+
+  };
+
+
+  document.getElementById("pickup_point").onchange = function () {
+
+    document.getElementById("pickup_time").value =
+        pickupTimes[this.value] || "";
+
+  };
+
+
+  document.getElementById("student_id").oninput = function () {
+
+    document.getElementById("username_display").value =
+        this.value;
+
+  };
+
+
+  document.querySelector("form").onsubmit = function () {
+
+    var p1 =
+        document.getElementById("password").value;
+
+    var p2 =
+        document.getElementById("confirm_password").value;
+
+    if (p1 !== p2) {
+
+      document.getElementById("pass-msg").innerText =
+        "Password and Confirm Password do not match!";
+
+      return false;
+
+    }
+
+    document.getElementById("pass-msg").innerText = "";
+
+    return true;
+
+  };
+
+</script>
+
+
+</body>
+</html>

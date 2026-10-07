@@ -1,0 +1,268 @@
+Body {
+    background-color: #f3f4f5;
+    color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+    
+.logo img {
+    width: 120px;
+    height: 100px;
+}
+
+.college-name {
+    margin-left: 15px;
+}
+
+.college-name h1 {
+    color: #003b7a;
+    margin: 0;
+}
+
+.college-name p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+#navlinks {
+    margin-left: auto;
+}
+
+#navlinks a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 15px;
+}
+
+#navlinks a:hover {
+    color: yellow;
+    border-bottom: 1px solid yellow;
+}
+
+#navlinks button {
+    background-color: #063b7a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex: 1; /* फुटर खाली ढकलण्यासाठी */
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.page-title .icon {
+    background-color: #e0e7ff;
+    color: #1a56db;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.page-title h1 {
+    font-size: 22px;
+    color: #111827;
+    margin: 0;
+}
+
+.page-title p {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 2px 0 0 0;
+}
+
+.main-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.section-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a56db;
+    margin-top: 15px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 4px;
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 5px;
+}
+
+.required {
+    color: #ef4444;
+}
+
+.form-group input, 
+.form-group select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    background-color: #fff;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: #1a56db;
+}
+
+.form-group input[disabled] {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.info-note {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #0256e8;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-submit:hover {
+    background-color: #0042b3;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+    color: #6b7280;
+}
+
+.footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    padding: 50px 40px 20px 40px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #334155;
+}
+
+.footer-about h2 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #94a3b8;
+    width: 100%;
+}
+
+.footer-column h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Mobile screen */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .stat-box {
+        width: 140px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}

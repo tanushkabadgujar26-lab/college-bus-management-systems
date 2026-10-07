@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vishwaniketan College Bus Management System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBR1kih2g3NX2x1fpIXfn0hSaAQJXQOPb822wKJSshGA&s=10" alt="Logo">
+    </div>
+
+    <div class="college-name">
+        <h1>VISHWANIKETAN</h1>
+        <p>Institute of Management, Entrepreneurship<br>and Engineering Technology</p>
+    </div>
+
+    <div id="navlinks">
+        <a href="#" style="margin: 20px;">Home</a>
+        <a href="routes.html" style="margin: 20px;">Bus Routes</a>
+        <a href="schedule.html" style="margin: 20px;">Schedule</a> 
+        <a href="#" style="margin: 20px;">Announcements</a>
+        <a href="busstdlogin.html"><button>Login</button></a>
+    </div>
+</div>
+
+<div class="main">
+    <div class="wel">
+        <div class="Welcome">
+            <p>Welcome to</p>
+            <h2>VISHWANIKETAN</h2>
+            <h3>College BUS</h3><br>
+            <h4>Management System</h4>
+
+            <p>Find your bus, route and schedule information<br>
+                quickly and easily.</p>
+        </div>
+        <div id="bus-img">
+            <img src="college bus.jpeg" >
+        </div>
+    </div>
+</div>
+
+<div id="FYB">
+    <h3 id="fby">Find your bus</h3>
+    <h5 id="eys">Enter you student ID to find your assigned bus</h5>
+    <div id="esb">
+        <!-- <input type="text" placeholder="Enter Student Id/Roll No">
+        <span id="std name error msg" style="color:red;"></span> -->
+        <form action="login.php" method="POST">
+    <input type="text" name="student_id" placeholder="Student ID" required>
+  <span id="std name error msg" style="color:red;"></span>
+
+  <input type="password" name="password" placeholder="Password" required>
+  <span id="password error msg" style="color:red;"></span>
+
+  
+    </div>
+
+    <div id="fy"><a href="dashboard.php"></a><button class="fmy">Find My Bus</button></div>
+</div>
+
+<div class="stats-container">
+    <div class="stat-box">
+        <div class="stat-icon"></div>
+        <div class="stat-number">10+</div>
+        <div class="stat-title">Buses</div>
+    </div>
+
+    <div class="stat-box">
+        <div class="stat-icon"></div>
+        <div class="stat-number">15+</div>
+        <div class="stat-title">Routes</div>
+    </div>
+
+    <div class="stat-box">
+        <div class="stat-icon"></div>
+        <div class="stat-number">800+</div>
+        <div class="stat-title">Students</div>
+    </div>
+
+    <div class="stat-box">
+        <div class="stat-icon"></div>
+        <div class="stat-number">15+</div>
+        <div class="stat-title">Locations</div>
+    </div>
+</div>
+
+<section class="helpdesk">
+    <div class="helpdesk-title">
+        <span class="phone-icon"></span>
+        <div>
+            <h1>Transport Helpdesk &amp; Inquiries</h1>
+            <p>Get in touch for bus support &amp; questions</p>
+        </div>
+    </div>
+
+    <div class="info-item">
+        <div class="info-heading">
+            <span></span>
+            <strong>Campus Address:</strong>
+        </div>
+        <p>Vishwaniketan iMEET, Kumbhivali, Khalapur, off Mumbai-Pune Expressway, Maharashtra</p>
+    </div>
+
+    <div class="info-item">
+        <div class="info-heading">
+            <span></span>
+            <strong>Operating Hours:</strong>
+        </div>
+        <p>Monday - Friday : 07:00 AM - 05:30 PM</p>
+    </div>
+
+    <div class="info-item">
+        <div class="info-heading">
+            <span></span>
+            <strong>Bus Coordinator Desk:</strong>
+        </div>
+        <p>Room 102, Ground Floor, Estate Department</p>
+    </div>
+
+    <div class="info-item">
+        <div class="info-heading">
+            <span></span>
+            <strong>Online Services:</strong>
+        </div>
+        <p>24/7 Bus Search &amp; Student Registration</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2> VISHWANIKETAN TRANSPORTATION CELL</h2>
+            <p>Providing organized, safe, and punctual daily transportation for engineering and management students.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="routes.html">Bus Routes &amp; Stops</a>
+            <a href="#fby">Find My Bus</a>
+            <a href="registration.html">Student Registration</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Portals</h3>
+            <a href="busstdlogin.html">Student Login</a>
+            <a href="coar.html">Coordinator Login</a>
+            <a href="schedule.html">Schedule &amp; Timings</a>
+        </div>
+    </div>
+
+    <div class="copyright">
+        &copy; 2026 Vishwaniketan Institute of Management, Entrepreneurship and Engineering Technology. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>

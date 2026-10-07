@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Submit Complaint</title>
+
+    <link rel="stylesheet"
+          href="complaint.css">
+
+</head>
+
+<body>
+
+<div class="complaint-container">
+
+    <div class="complaint-box">
+
+        <h2>Submit Complaint</h2>
+
+        <p>
+            Please provide your complaint details.
+        </p>
+
+
+        <!-- Success / Error Message -->
+
+        <div id="message"></div>
+
+
+        <form action="complaint.php"
+              method="POST">
+
+
+            <label for="complaint_type">
+                Complaint Type
+            </label>
+
+            <select id="complaint_type"
+                    name="complaint_type"
+                    required>
+
+                <option value="">
+                    Select Complaint Type
+                </option>
+
+                <option value="Bus Delay">
+                    Bus Delay
+                </option>
+
+                <option value="Bus Driver">
+                    Bus Driver
+                </option>
+
+                <option value="Bus Cleanliness">
+                    Bus Cleanliness
+                </option>
+
+                <option value="Pickup Point">
+                    Pickup Point
+                </option>
+
+                <option value="Route">
+                    Route
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label for="subject">
+                Subject
+            </label>
+
+            <input type="text"
+                   id="subject"
+                   name="subject"
+                   placeholder="Enter complaint subject"
+                   required>
+
+
+            <label for="description">
+                Description
+            </label>
+
+            <textarea id="description"
+                      name="description"
+                      rows="6"
+                      placeholder="Enter your complaint..."
+                      required></textarea>
+
+
+            <button type="submit">
+                Submit Complaint
+            </button>
+
+        </form>
+
+
+        <a href="dashboard.php"
+           class="back">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const message = document.getElementById("message");
+
+
+if (params.get("success") === "1") {
+
+    message.innerHTML =
+        '<div class="success">Complaint submitted successfully.</div>';
+
+}
+
+
+if (params.get("error") === "empty") {
+
+    message.innerHTML =
+        '<div class="error">Please fill all fields.</div>';
+
+}
+
+
+if (params.get("error") === "database") {
+
+    message.innerHTML =
+        '<div class="error">Something went wrong. Please try again.</div>';
+
+}
+
+</script>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2> VISHWANIKETAN TRANSPORTATION CELL</h2>
+            <p>Providing organized, safe, and punctual daily transportation for engineering and management students.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="routes.html">Bus Routes &amp; Stops</a>
+            <a href="#fby">Find My Bus</a>
+            <a href="registration.html">Student Registration</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Portals</h3>
+            <a href="busstdlogin.html">Student Login</a>
+            <a href="coar.html">Coordinator Login</a>
+            <a href="schedule.html">Schedule &amp; Timings</a>
+        </div>
+    </div>
+
+    <div class="copyright">
+        &copy; 2026 Vishwaniketan Institute of Management, Entrepreneurship and Engineering Technology. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>
